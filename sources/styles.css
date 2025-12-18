@@ -1,0 +1,63 @@
+/* Configuración General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* 1. Banner de ancho completo */
+.project-banner img {
+    width: 100%;
+    height: 400px; /* Ajusta la altura a tu gusto */
+    object-fit: cover;
+    display: block;
+}
+
+/* 2. Contenedor Central (Limita el ancho del contenido) */
+.container {
+    max-width: 900px; /* Ancho máximo de la página */
+    margin: 0 auto;   /* Centra todo el bloque main */
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* 3. Título y Descripciones simples centradas */
+.project-title, .description-block, .description-full {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 4. Filas Mixtas (Imagen + Texto) */
+.content-row {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 30px;           /* Espacio entre texto e imagen */
+    margin-bottom: 40px;
+}
+
+/* Hace que las columnas ocupen el mismo espacio */
+.text-col, .image-col {
+    flex: 1;
+}
+
+.image-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* 5. Inversión (Para el bloque donde la imagen va a la izquierda) */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+    .content-row, .reverse {
+        flex-direction: column; /* Se ponen uno sobre otro en móviles */
+        text-align: center;
+    }
+}
