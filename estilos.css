@@ -1,0 +1,117 @@
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  background-color: #0d0d1a; /* fondo oscuro profundo */
+  color: #e0e0ff;            /* texto claro con tono azul */
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Banner superior */
+.banner {
+  height: 250px;
+  background-image: url('sources/hola.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #6f00ff;
+  box-shadow: 0 0 40px #6f00ff88 inset;
+}
+
+
+/* Barra de navegación debajo del banner */
+.header-nav {
+  background-color: #1a1a2e;
+  padding: 15px 40px;
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #6f00ff;
+}
+
+.header-nav a {
+  color: #9f9fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #00f0ff;
+  text-decoration: underline;
+}
+
+/* Tarjetas */
+.card {
+  width: 700px;
+  min-height: 150px;
+  height: auto;
+  border: 1px solid #3f007f;
+  border-radius: 8px;
+  padding: 16px;
+  background: #1a1a2e;
+  margin: 20px auto;
+  box-shadow: 0 0 10px #6f00ff55;
+}
+
+.card-title {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #c0aaff;
+}
+
+.card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.card-thumb {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid #6f00ff;
+}
+
+.card-description {
+  flex: 1;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #e0e0ff;
+}
+
+/* Footer */
+.main-footer {
+  background-color: #1a1a2e;
+  color: #9f9fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 16px;
+  border-top: 1px solid #6f00ff;
+}
+
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #9f9fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00f0ff;
+  text-decoration: underline;
+}
+
+

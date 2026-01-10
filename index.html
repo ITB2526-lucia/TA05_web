@@ -1,28 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pagina principal</title>
-    <link rel="stylesheet" href="./sources/styles.css">
+    <title>Inici</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-    <header img="/sources/Möm.jpeg" class="main-header" >
-        <div class="banner-content">
-            <h1>Bienvenido a mi Web</h1>
-            <p>Creatividad y Código</p>
-        </div>
+    <header class="main-header">
+        <div class="banner"></div>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Inici</a></li>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
+        <nav class="header-nav">
+            <a href="pages/about.html">About me</a>
+            <a href="pages/education.html">Projects</a>
+            <a href="pages/experience.html">Contacto</a>
         </nav>
     </header>
-    <main class="page-container">
-    <h1 class="page-title">About me</h1>
-    </main>
+
+
+    <main class="card">
+  <h2 class="card-title">Introducción</h2>
+  <p class="card-description">
+    En esta página presento mis dos proyectos más destacados, donde aplico de forma práctica los conocimientos adquiridos y demuestro mi capacidad para diseñar, implementar y asegurar sistemas reales.</p>
+</main>
+
+<article class="card">
+  <h2 class="card-title">Despliegue de Infraestructura Linux y Servicios de Red</h2>
+
+  <div class="card-content">
+    <img src="sources/1thumb.jpg" alt="Miniatura 1" class="card-thumb">
+
+    <p class="card-description">
+    Creación de entorno funcional y seguro para utilización en entorno empresarial real. Desplegamiento de infraestructura basada en servidores Linux, con servicios esenciales como DNS, DHCP, FTP y un servidor web.</p>
+  </div>
+</article>
+
+<article class="card">
+  <h2 class="card-title">Entorno Virtualizado con Proxmox y Directorio Activo</h2>
+
+  <div class="card-content">
+    <img src="sources/2thumb.jpg" alt="Miniatura 2" class="card-thumb">
+
+    <p class="card-description">
+    Desarrollo de solución de virtualización mediante tecnologías como Proxmox y máquinas virtuales Windows y Linux. Diseño de red interna segmentada, Active Directory, entre otros.</p>
+  </div>
+</article>
+
+<footer class="main-footer">
+    <p>© 2024 Lucía — Todos los derechos reservados</p>
+
+    <div class="social-links">
+        <a href="https://instagram.com/tu_usuario" target="_blank">Instagram</a>
+        <a href="https://github.com/tu_usuario" target="_blank">GitHub</a>
+    </div>
+</footer>
+
 </body>
 </html>
