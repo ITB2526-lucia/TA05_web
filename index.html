@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inici</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 
 
 </head>
 <body>
+
+    <img src="sources/descarga.jpg" class="side-float left-float">
+    <img src="sources/descarga1.jpg" class="side-float right-float">
+
+
+    <!-- resto de tu contenido -->
+
     <header class="main-header">
-        <div class="banner"></div>
+        <div class="banner">
+            <h1 class="banner-title">LUCIA'S PORTFOLIO</h1>
+        </div>
 
         <nav class="header-nav">
-            <a href="pages/about.html">About me</a>
-            <a href="pages/education.html">Projects</a>
-            <a href="pages/experience.html">Contacto</a>
-        </nav>
-    </header>
+    <div class="nav-links">
+        <a href="pages/about.html">Sobre mí</a>
+        <a href="pages/education.html">Proyectos</a>
+        <a href="pages/experience.html">Contacto</a>
+    </div>
 
+    <div class="lang-wrapper">
+        <button class="lang-btn" id="lang-btn">
+            Idioma <span class="lang-arrow">▼</span>
+        </button>
+
+        <div class="lang-menu" id="lang-menu">
+            <a href="index.html">Castellano</a>
+            <a href="index_ca.html">Català</a>
+            <a href="index_en.html">English</a>
+        </div>
+    </div>
+
+</nav>
+
+    </header>
 
     <main class="card">
   <h2 class="card-title">Introducción</h2>
@@ -50,13 +76,44 @@
 </article>
 
 <footer class="main-footer">
-    <p>© 2024 Lucía — Todos los derechos reservados</p>
+    <p>© 2026 Lucía — Todos los derechos reservados</p>
 
     <div class="social-links">
         <a href="https://instagram.com/tu_usuario" target="_blank">Instagram</a>
         <a href="https://github.com/tu_usuario" target="_blank">GitHub</a>
     </div>
 </footer>
+
+<script>
+const btn = document.getElementById("lang-btn");
+const menu = document.getElementById("lang-menu");
+
+// Abrir/cerrar menú y animar flecha
+btn.addEventListener("click", () => {
+    const isOpen = menu.style.display === "block";
+
+    menu.style.display = isOpen ? "none" : "block";
+    btn.classList.toggle("open", !isOpen);
+});
+
+// Cerrar si haces clic fuera
+document.addEventListener("click", (e) => {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+        btn.classList.remove("open");
+    }
+});
+
+// Cambiar idioma al hacer clic en un enlace
+document.querySelectorAll(".lang-menu a").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = link.getAttribute("href");
+    });
+});
+</script>
+
+
 
 </body>
 </html>

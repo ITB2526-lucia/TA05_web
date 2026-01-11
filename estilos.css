@@ -4,12 +4,12 @@ body {
   padding: 0 40px;
   background-color: #0d0d1a; /* fondo oscuro profundo */
   color: #e0e0ff;            /* texto claro con tono azul */
-  font-family: 'Arial', sans-serif;
-  letter-spacing: 1px;
+  font-family: 'Oxanium', sans-serif;
 }
 
 /* Banner superior */
 .banner {
+  position: relative; /* necesario para posicionar el texto dentro */
   height: 250px;
   background-image: url('sources/hola.jpg');
   background-size: cover;
@@ -19,6 +19,23 @@ body {
   box-shadow: 0 0 40px #6f00ff88 inset;
 }
 
+/* Texto encima del banner */
+.banner-title {
+  position: absolute;
+  top: 50%;              /* centrado vertical */
+  left: 50%;             /* centrado horizontal */
+  transform: translate(-50%, -50%);
+  color: #e0e0ff;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #6f00ff, 0 0 20px #6f00ff;
+  margin: 0;
+  text-align: center;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+
 
 /* Barra de navegación debajo del banner */
 .header-nav {
@@ -27,25 +44,56 @@ body {
   display: flex;
   gap: 20px;
   border-bottom: 1px solid #6f00ff;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-nav a {
+  position: relative;
   color: #9f9fff;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
-  transition: color 0.3s ease;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+/* Brillo morado */
 .header-nav a:hover {
-  color: #00f0ff;
-  text-decoration: underline;
+  color: #c08aff; /* un morado más claro para el hover */
+  text-shadow: 0 0 8px #9f00ff, 0 0 15px #9f00ff;
 }
+
+/* Subrayado animado morado */
+.header-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #9f00ff;
+  box-shadow: 0 0 8px #9f00ff;
+  transition: width 0.3s ease;
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+}
+
+
+
+.nav-links {
+  display: flex;
+  gap: 35px; /* antes 20px, ahora más amplio */
+  align-items: center;
+}
+
 
 /* Tarjetas */
 .card {
   width: 700px;
-  min-height: 150px;
   height: auto;
   border: 1px solid #3f007f;
   border-radius: 8px;
@@ -53,13 +101,24 @@ body {
   background: #1a1a2e;
   margin: 20px auto;
   box-shadow: 0 0 10px #6f00ff55;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.card:hover {
+  transform: translateY(-6px); /* se eleva un poco */
+  box-shadow: 0 0 20px #6f00ffaa, 0 0 40px #6f00ff55; /* brillo neón */
+  border-color: #9f00ff; /* un toque más brillante */
+}
+
 
 .card-title {
   margin: 0 0 12px 0;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   color: #c0aaff;
+  letter-spacing: 2px
 }
 
 .card-content {
@@ -79,9 +138,10 @@ body {
 .card-description {
   flex: 1;
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
   color: #e0e0ff;
+  letter-spacing: 1px
 }
 
 /* Footer */
@@ -110,8 +170,203 @@ body {
 }
 
 .social-links a:hover {
+  color: #c08aff; /* morado claro */
+  text-shadow: 0 0 8px #9f00ff, 0 0 15px #9f00ff; /* brillo neón */
+  text-decoration: underline;
+}
+
+
+.lang-wrapper {
+  position: relative;
+}
+
+/* Botón de idioma */
+.lang-btn {
+  background: none;
+  border: none;
+  color: #9f9fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+
+.lang-btn:hover {
+  color: #c08aff; /* morado claro */
+  text-shadow: 0 0 8px #9f00ff, 0 0 15px #9f00ff;
+}
+
+
+/* Menú desplegable */
+.lang-menu {
+  display: none;
+  position: absolute;
+  background-color: #1a1a2e;
+  border: 1px solid #6f00ff;
+  border-radius: 6px;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: 0 0 15px #6f00ff55;
+  top: 45px;
+  right: 0;
+}
+
+.lang-menu a {
+  display: block;
+  color: #9f9fff;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: 0.3s ease;
+}
+
+.lang-menu a:hover {
   color: #00f0ff;
   text-decoration: underline;
 }
 
+.lang-arrow {
+  display: inline-block;
+  margin-left: 6px;      /* separación respecto al texto */
+  transition: transform 0.3s ease; /* animación suave */
+}
+
+.lang-btn.open .lang-arrow {
+  transform: rotate(180deg); /* gira el triángulo */
+}
+
+.side-float {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;              /* ancho del banner */
+  height: 950px;             /* más altura */
+  object-fit: cover;
+  border: 1px solid #6f00ff; /* borde fino morado */
+  border-radius: 10px;
+  box-shadow: 0 0 20px #6f00ff55;
+  z-index: 2;
+  opacity: 0.95;
+}
+
+/* Imagen izquierda */
+.left-float {
+  left: 40px;
+}
+
+/* Imagen derecha */
+.right-float {
+  right: 40px;
+}
+
+
+/* teléfonos */
+
+@media (max-width: 768px) {
+
+  /* NAV: convertirlo en columna */
+  .header-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Botón de idioma centrado */
+  .lang-wrapper {
+    align-self: center;
+  }
+
+  /* BANNER: título más pequeño */
+  .banner-title {
+    font-size: 28px;
+  }
+
+  /* CARDS: que ocupen todo el ancho y se apilen */
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* CONTENIDO: quitar padding lateral extra */
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* FOOTER: centrado y más compacto */
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* pantallas medianas */
+
+@media (max-width: 1100px) {
+
+  /* Reducir espacio lateral del body */
+  body {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+
+  /* Cards más compactas */
+  .card {
+    padding: 18px;
+  }
+
+  .card-content {
+    gap: 10px;
+  }
+
+  /* Nav con menos separación */
+  .nav-links {
+    gap: 20px;
+  }
+}
+
+/* pantallas grandes */
+
+@media (min-width: 1400px) {
+
+  /* Aumentar ligeramente el ancho del contenido */
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Cards más amplias */
+  .card {
+    padding: 28px;
+  }
+
+  .card-content {
+    gap: 18px;
+  }
+
+  /* Títulos más grandes */
+  .banner-title {
+    font-size: 48px;
+  }
+}
 
