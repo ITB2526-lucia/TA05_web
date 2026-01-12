@@ -247,7 +247,7 @@ body {
   box-shadow: 0 0 15px #6f00ff55;
   top: 45px;
   right: 0;
-  z-index; 9999;
+  z-index: 9999;
 }
 
 .lang-menu a {
