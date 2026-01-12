@@ -1,5 +1,5 @@
 body {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
   background-color: #0d0d1a; /* fondo oscuro profundo */
@@ -16,6 +16,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-bottom: 2px solid #6f00ff;
+  border-left: 1px solid #6f00ff; /* AÑADIDO */
+  border-right: 1px solid #6f00ff; /* AÑADIDO */
   box-shadow: 0 0 40px #6f00ff88 inset;
 }
 
@@ -44,6 +46,8 @@ body {
   display: flex;
   gap: 20px;
   border-bottom: 1px solid #6f00ff;
+  border-left: 1px solid #6f00ff; /* AÑADIDO */
+  border-right: 1px solid #6f00ff; /* AÑADIDO */
   position: relative;
   align-items: center;
   justify-content: space-between;
@@ -59,14 +63,14 @@ body {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Brillo morado */
-.header-nav a:hover {
-  color: #c08aff; /* un morado más claro para el hover */
+/* Brillo morado SOLO para los enlaces del nav principal */
+.nav-links a:hover {
+  color: #c08aff;
   text-shadow: 0 0 8px #9f00ff, 0 0 15px #9f00ff;
 }
 
-/* Subrayado animado morado */
-.header-nav a::after {
+/* Subrayado animado morado SOLO para los enlaces del nav principal */
+.nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -78,10 +82,9 @@ body {
   transition: width 0.3s ease;
 }
 
-.header-nav a:hover::after {
+.nav-links a:hover::after {
   width: 100%;
 }
-
 
 
 .nav-links {
@@ -90,12 +93,32 @@ body {
   align-items: center;
 }
 
+.main-content {
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.main-title {
+  font-size: 26px;
+  color: #c0aaff;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.main-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0ff;
+  letter-spacing: 1px;
+}
+
 
 /* Tarjetas */
 .card {
-  width: 700px;
+  width: 100%;
+  max-width: 900px;
   height: auto;
-  border: 1px solid #3f007f;
+  border: 1px solid #6f00ff;
   border-radius: 8px;
   padding: 16px;
   background: #1a1a2e;
@@ -105,6 +128,13 @@ body {
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 
 .card:hover {
   transform: translateY(-6px); /* se eleva un poco */
@@ -153,6 +183,8 @@ body {
   margin-top: 40px;
   font-size: 16px;
   border-top: 1px solid #6f00ff;
+  border-left: 1px solid #6f00ff; /* AÑADIDO */
+  border-right: 1px solid #6f00ff; /* AÑADIDO */
 }
 
 .social-links {
@@ -178,6 +210,7 @@ body {
 
 .lang-wrapper {
   position: relative;
+  z-index: 9999;
 }
 
 /* Botón de idioma */
@@ -214,6 +247,7 @@ body {
   box-shadow: 0 0 15px #6f00ff55;
   top: 45px;
   right: 0;
+  z-index; 9999;
 }
 
 .lang-menu a {
@@ -225,8 +259,8 @@ body {
 }
 
 .lang-menu a:hover {
-  color: #00f0ff;
-  text-decoration: underline;
+  color: #c08aff; /* morado claro */
+  text-shadow: 0 0 8px #9f00ff;
 }
 
 .lang-arrow {
@@ -237,136 +271,5 @@ body {
 
 .lang-btn.open .lang-arrow {
   transform: rotate(180deg); /* gira el triángulo */
-}
-
-.side-float {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 200px;              /* ancho del banner */
-  height: 950px;             /* más altura */
-  object-fit: cover;
-  border: 1px solid #6f00ff; /* borde fino morado */
-  border-radius: 10px;
-  box-shadow: 0 0 20px #6f00ff55;
-  z-index: 2;
-  opacity: 0.95;
-}
-
-/* Imagen izquierda */
-.left-float {
-  left: 40px;
-}
-
-/* Imagen derecha */
-.right-float {
-  right: 40px;
-}
-
-
-/* teléfonos */
-
-@media (max-width: 768px) {
-
-  /* NAV: convertirlo en columna */
-  .header-nav {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  /* Botón de idioma centrado */
-  .lang-wrapper {
-    align-self: center;
-  }
-
-  /* BANNER: título más pequeño */
-  .banner-title {
-    font-size: 28px;
-  }
-
-  /* CARDS: que ocupen todo el ancho y se apilen */
-  .card {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .card-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* CONTENIDO: quitar padding lateral extra */
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  /* FOOTER: centrado y más compacto */
-  .social-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* pantallas medianas */
-
-@media (max-width: 1100px) {
-
-  /* Reducir espacio lateral del body */
-  body {
-    padding-left: 180px;
-    padding-right: 180px;
-  }
-
-  /* Cards más compactas */
-  .card {
-    padding: 18px;
-  }
-
-  .card-content {
-    gap: 10px;
-  }
-
-  /* Nav con menos separación */
-  .nav-links {
-    gap: 20px;
-  }
-}
-
-/* pantallas grandes */
-
-@media (min-width: 1400px) {
-
-  /* Aumentar ligeramente el ancho del contenido */
-  body {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  /* Cards más amplias */
-  .card {
-    padding: 28px;
-  }
-
-  .card-content {
-    gap: 18px;
-  }
-
-  /* Títulos más grandes */
-  .banner-title {
-    font-size: 48px;
-  }
 }
 
