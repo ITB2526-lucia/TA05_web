@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infraestructura Linux y Servicios de Red</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="main-header">
+    <div class="banner">
+        <h1 class="banner-title">LUCIA'S PORTFOLIO</h1>
+    </div>
+
+    <nav class="header-nav">
+        <div class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="../pages/about.html">Sobre mí</a>
+            <a href="../pages/proyectos.html">Proyectos</a>
+            <a href="../pages/experience.html">Contacto</a>
+        </div>
+
+        <div class="lang-wrapper">
+            <button class="lang-btn" id="lang-btn">
+                Idioma <span class="lang-arrow">▼</span>
+            </button>
+
+            <div class="lang-menu" id="lang-menu">
+                <a href="../index.html">Castellano</a>
+                <a href="../index_ca.html">Català</a>
+                <a href="../index_en.html">English</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="project-body">
+
+    <h2 class="project-title">Despliegue de Infraestructura Linux y Servicios de Red</h2>
+
+    <p class="project-paragraph">
+        Este proyecto consiste en la creación de una infraestructura completa basada en servidores Linux,
+        diseñada para simular un entorno empresarial real. El objetivo principal fue desplegar servicios
+        esenciales de red, garantizar su funcionamiento estable y aplicar medidas de seguridad adecuadas.
+    </p>
+
+    <img src="../sources/1thumb.jpg" alt="Infraestructura Linux" class="project-image">
+
+    <h3 class="project-subtitle">Objetivos del proyecto</h3>
+
+    <p class="project-paragraph">
+        El propósito fue construir un entorno funcional que incluyera servicios fundamentales como:
+    </p>
+
+    <ul class="project-list">
+        <li>Servidor DNS para resolución de nombres interna.</li>
+        <li>Servidor DHCP para asignación automática de direcciones IP.</li>
+        <li>Servidor FTP para transferencia de archivos.</li>
+        <li>Servidor web Apache con páginas personalizadas.</li>
+        <li>Gestión de usuarios y permisos en Linux.</li>
+    </ul>
+
+    <h3 class="project-subtitle">Arquitectura del sistema</h3>
+
+    <p class="project-paragraph">
+        La infraestructura se diseñó siguiendo un modelo modular, donde cada servicio se ejecuta en una
+        máquina virtual independiente. Esto permite aislar fallos, mejorar la seguridad y facilitar el
+        mantenimiento.
+    </p>
+
+    <h3 class="project-subtitle">Seguridad implementada</h3>
+
+    <p class="project-paragraph">
+        Se aplicaron medidas de endurecimiento del sistema, incluyendo:
+    </p>
+
+    <ul class="project-list">
+        <li>Configuración de firewall con reglas específicas.</li>
+        <li>Desactivación de servicios innecesarios.</li>
+        <li>Control de acceso mediante SSH seguro.</li>
+        <li>Gestión de permisos y grupos.</li>
+    </ul>
+
+        <h3 class="project-subtitle">Tecnologías utilizadas</h3>
+
+    <p class="project-paragraph">
+        Para construir esta infraestructura se utilizaron diversas herramientas y tecnologías orientadas a la
+        administración de sistemas y servicios de red. Estas tecnologías permiten crear un entorno estable,
+        seguro y funcional, similar al que se utiliza en entornos empresariales reales.
+    </p>
+
+    <ul class="project-list">
+        <li>Distribuciones Linux (Debian/Ubuntu Server) para los servicios principales.</li>
+        <li>Servidor DNS (Bind9) para la resolución de nombres interna.</li>
+        <li>Servidor DHCP para la asignación automática de direcciones IP.</li>
+        <li>Servidor FTP para la transferencia de archivos.</li>
+        <li>Servidor web Apache para alojar contenido y páginas personalizadas.</li>
+        <li>SSH para la administración remota segura.</li>
+        <li>Firewall UFW para el control de tráfico y endurecimiento del sistema.</li>
+    </ul>
+
+    <h3 class="project-subtitle">Conclusiones</h3>
+
+    <p class="project-paragraph">
+        Este proyecto me permitió comprender en profundidad cómo funcionan los servicios esenciales de red y
+        cómo se integran dentro de una infraestructura Linux. También reforzó mis conocimientos en seguridad,
+        administración de usuarios, gestión de permisos y despliegue de servicios críticos.
+    </p>
+
+    <p class="project-paragraph">
+        Gracias a este entorno pude simular escenarios reales, resolver problemas técnicos, optimizar servicios
+        y aplicar buenas prácticas de administración de sistemas. Es un proyecto que demuestra mi capacidad para
+        diseñar, configurar y mantener infraestructuras basadas en Linux de forma profesional.
+    </p>
+
+</main>
+
+<footer class="main-footer">
+    <p>© 2026 Lucía — Todos los derechos reservados</p>
+    <div class="social-links">
+        <a href="https://instagram.com/tu_usuario" target="_blank">Instagram</a>
+        <a href="https://github.com/tu_usuario" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/lucia-isabel" target="_blank">LinkedIn</a>
+    </div>
+</footer>
+
+<script>
+const btn = document.getElementById("lang-btn");
+const menu = document.getElementById("lang-menu");
+
+btn.addEventListener("click", () => {
+    const isOpen = menu.style.display === "block";
+    menu.style.display = isOpen ? "none" : "block";
+    btn.classList.toggle("open", !isOpen);
+});
+
+document.addEventListener("click", (e) => {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+        btn.classList.remove("open");
+    }
+});
+</script>
+
+</body>
+</html>

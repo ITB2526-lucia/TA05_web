@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="main-header">
+    <div class="banner">
+        <h1 class="banner-title">LUCIA'S PORTFOLIO</h1>
+    </div>
+
+    <nav class="header-nav">
+        <div class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="../pages/about.html">Sobre mí</a>
+            <a href="../pages/education.html">Proyectos</a>
+            <a href="../pages/experience.html">Contacto</a>
+        </div>
+
+        <div class="lang-wrapper">
+            <button class="lang-btn" id="lang-btn">
+                Idioma <span class="lang-arrow">▼</span>
+            </button>
+
+            <div class="lang-menu" id="lang-menu">
+                <a href="../index.html">Castellano</a>
+                <a href="../index_ca.html">Català</a>
+                <a href="../index_en.html">English</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="about-body">
+
+    <h2 class="about-title">Sobre mí</h2>
+
+    <p class="about-paragraph">
+        Soy Lucía, una apasionada del mundo de la informática, la administración de sistemas y la ciberseguridad.
+        Me encanta entender cómo funcionan las cosas por dentro, construir entornos estables y seguros, y aprender
+        constantemente nuevas tecnologías. Mi objetivo es seguir creciendo profesionalmente y aportar soluciones
+        eficientes y creativas en cualquier entorno técnico.
+    </p>
+
+    <img src="../sources/yo.jpg" alt="Foto de perfil" class="about-image">
+
+    <h3 class="about-subtitle">Recorrido académico</h3>
+
+    <p class="about-paragraph">
+        Mi formación ha estado siempre orientada al ámbito tecnológico. A lo largo de los años he adquirido
+        conocimientos sólidos en administración de sistemas, redes, virtualización y seguridad informática.
+    </p>
+
+    <ul class="about-list">
+        <li>Grado Medio en Sistemas Microinformáticos y Redes (SMX)</li>
+        <li>Grado Superior en Administración de Sistemas Informáticos en Red (ASIR)</li>
+        <li>Especialización en virtualización, Linux y servicios de red</li>
+        <li>Formación complementaria en ciberseguridad y hardening de sistemas</li>
+    </ul>
+
+    <h3 class="about-subtitle">Experiencia laboral</h3>
+
+    <p class="about-paragraph">
+        He tenido la oportunidad de trabajar en entornos reales donde he podido aplicar mis conocimientos y
+        desarrollar nuevas habilidades. Mi experiencia incluye:
+    </p>
+
+    <ul class="about-list">
+        <li>Soporte técnico y resolución de incidencias</li>
+        <li>Administración básica de servidores Linux y Windows</li>
+        <li>Gestión de redes internas y configuración de servicios</li>
+        <li>Despliegue de máquinas virtuales y entornos de pruebas</li>
+    </ul>
+
+    <p class="about-paragraph">
+        Mi objetivo es seguir creciendo en el ámbito de la administración de sistemas y la ciberseguridad,
+        aportando valor en cada proyecto y aprendiendo de cada experiencia.
+    </p>
+
+</main>
+
+<footer class="main-footer">
+    <p>© 2026 Lucía — Todos los derechos reservados</p>
+    <div class="social-links">
+        <a href="https://instagram.com/tu_usuario" target="_blank">Instagram</a>
+        <a href="https://github.com/tu_usuario" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/lucia-isabel" target="_blank">LinkedIn</a>
+    </div>
+</footer>
+
+<script>
+const btn = document.getElementById("lang-btn");
+const menu = document.getElementById("lang-menu");
+
+btn.addEventListener("click", () => {
+    const isOpen = menu.style.display === "block";
+    menu.style.display = isOpen ? "none" : "block";
+    btn.classList.toggle("open", !isOpen);
+});
+
+document.addEventListener("click", (e) => {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+        btn.classList.remove("open");
+    }
+});
+</script>
+
+</body>
+</html>

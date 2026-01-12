@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entorno Virtualizado con Proxmox y Active Directory</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="main-header">
+    <div class="banner">
+        <h1 class="banner-title">LUCIA'S PORTFOLIO</h1>
+    </div>
+
+    <nav class="header-nav">
+        <div class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="../pages/about.html">Sobre mí</a>
+            <a href="../pages/education.html">Proyectos</a>
+            <a href="../pages/experience.html">Contacto</a>
+        </div>
+
+        <div class="lang-wrapper">
+            <button class="lang-btn" id="lang-btn">
+                Idioma <span class="lang-arrow">▼</span>
+            </button>
+
+            <div class="lang-menu" id="lang-menu">
+                <a href="../index.html">Castellano</a>
+                <a href="../index_ca.html">Català</a>
+                <a href="../index_en.html">English</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="project-body">
+
+    <h2 class="project-title">Entorno Virtualizado con Proxmox y Active Directory</h2>
+
+    <p class="project-paragraph">
+        Este proyecto consiste en la creación de un entorno virtualizado completo utilizando Proxmox como hipervisor.
+        El objetivo fue diseñar una infraestructura flexible, escalable y segura que permitiera gestionar máquinas
+        virtuales, implementar un dominio Active Directory y simular un entorno empresarial real.
+    </p>
+
+    <img src="../sources/2thumb.jpg" alt="Entorno Proxmox" class="project-image">
+
+    <h3 class="project-subtitle">Objetivos del proyecto</h3>
+
+    <p class="project-paragraph">
+        El proyecto se centró en construir un entorno profesional que permitiera:
+    </p>
+
+    <ul class="project-list">
+        <li>Gestionar máquinas virtuales desde un único panel centralizado.</li>
+        <li>Implementar un dominio Active Directory funcional.</li>
+        <li>Crear políticas de grupo (GPO) para usuarios y equipos.</li>
+        <li>Configurar redes internas segmentadas para mejorar la seguridad.</li>
+        <li>Simular un entorno empresarial real con clientes Windows y servidores Linux.</li>
+    </ul>
+
+    <h3 class="project-subtitle">Arquitectura del sistema</h3>
+
+    <p class="project-paragraph">
+        El sistema se basa en un servidor Proxmox que aloja varias máquinas virtuales. Entre ellas se encuentran:
+    </p>
+
+    <ul class="project-list">
+        <li>Un controlador de dominio Windows Server.</li>
+        <li>Clientes Windows 10 unidos al dominio.</li>
+        <li>Servidores Linux para pruebas y servicios adicionales.</li>
+        <li>Redes internas separadas para gestión, usuarios y servicios.</li>
+    </ul>
+
+    <p class="project-paragraph">
+        Esta arquitectura permite aislar servicios, mejorar la seguridad y facilitar la administración del entorno.
+    </p>
+
+    <h3 class="project-subtitle">Active Directory y políticas de grupo</h3>
+
+    <p class="project-paragraph">
+        Se configuró un dominio completo con usuarios, grupos y políticas de seguridad. Las GPO permiten controlar
+        configuraciones clave dentro de la red, como:
+    </p>
+
+    <ul class="project-list">
+        <li>Restricciones de acceso y permisos.</li>
+        <li>Instalación automática de software.</li>
+        <li>Mapeo de unidades de red.</li>
+        <li>Configuración del escritorio y directivas de seguridad.</li>
+    </ul>
+
+    <p class="project-paragraph">
+        Gracias a estas políticas, el entorno se comporta como una red empresarial real, con control centralizado
+        y gestión eficiente de usuarios y equipos.
+    </p>
+
+        <h3 class="project-subtitle">Tecnologías utilizadas</h3>
+
+    <p class="project-paragraph">
+        Para llevar a cabo este proyecto se utilizaron diversas herramientas y tecnologías que permiten
+        construir un entorno virtualizado profesional y escalable. Entre ellas destacan:
+    </p>
+
+    <ul class="project-list">
+        <li>Proxmox VE como hipervisor principal.</li>
+        <li>Windows Server para la implementación de Active Directory.</li>
+        <li>Windows 10 como clientes unidos al dominio.</li>
+        <li>Distribuciones Linux para servicios adicionales y pruebas.</li>
+        <li>Redes virtuales internas y bridges configurados en Proxmox.</li>
+        <li>GPO para la gestión centralizada de usuarios y equipos.</li>
+    </ul>
+
+    <h3 class="project-subtitle">Conclusiones</h3>
+
+    <p class="project-paragraph">
+        Este proyecto me permitió comprender en profundidad cómo funciona un entorno empresarial real,
+        desde la gestión de máquinas virtuales hasta la administración de usuarios mediante Active Directory.
+        También reforzó mis conocimientos en redes, seguridad y virtualización, y me dio experiencia práctica
+        en la creación de infraestructuras escalables y bien organizadas.
+    </p>
+
+    <p class="project-paragraph">
+        Gracias a este entorno pude simular situaciones reales, aplicar políticas de seguridad, automatizar
+        configuraciones y trabajar con diferentes sistemas operativos de forma integrada. Es un proyecto que
+        refleja mi capacidad para diseñar, implementar y administrar sistemas complejos.
+    </p>
+
+
+</main>
+
+<footer class="main-footer">
+    <p>© 2026 Lucía — Todos los derechos reservados</p>
+    <div class="social-links">
+        <a href="https://instagram.com/tu_usuario" target="_blank">Instagram</a>
+        <a href="https://github.com/tu_usuario" target="_blank">GitHub</a>
+    </div>
+</footer>
+
+<script>
+const btn = document.getElementById("lang-btn");
+const menu = document.getElementById("lang-menu");
+
+btn.addEventListener("click", () => {
+    const isOpen = menu.style.display === "block";
+    menu.style.display = isOpen ? "none" : "block";
+    btn.classList.toggle("open", !isOpen);
+});
+
+document.addEventListener("click", (e) => {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+        btn.classList.remove("open");
+    }
+});
+</script>
+
+</body>
+</html>
