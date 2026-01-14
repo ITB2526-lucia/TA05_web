@@ -463,3 +463,142 @@ body {
   margin-top: 4px;
   display: none;
 }
+
+/* ===========================
+   🔥 SECCIÓN RESPONSIVE AÑADIDA
+   =========================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+  body {
+    padding: 0 20px;
+  }
+
+  .banner {
+    height: 180px;
+  }
+
+  .banner-title {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  .header-nav {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .card-content {
+    gap: 10px;
+  }
+
+  .card-thumb {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+
+  body {
+    padding: 0 10px;
+  }
+
+  /* Banner */
+  .banner {
+    height: 140px;
+  }
+
+  .banner-title {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  /* NAV: convertir en menú vertical */
+  .header-nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-nav a {
+    font-size: 16px;
+  }
+
+  /* Tarjetas */
+  .card {
+    padding: 14px;
+  }
+
+  .card-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-thumb {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .card-description {
+    font-size: 15px;
+  }
+
+  /* Textos generales */
+  .main-title,
+  .project-title,
+  .about-title,
+  .contact-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .main-text,
+  .project-paragraph,
+  .about-paragraph,
+  .contact-intro {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Formularios */
+  .contact-form {
+    gap: 15px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .contact-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* Footer */
+  .main-footer {
+    font-size: 14px;
+  }
+
+  .social-links {
+    gap: 12px;
+  }
+}
