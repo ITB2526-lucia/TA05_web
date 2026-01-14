@@ -1,10 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Infrastructure and Network Services</title>
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+<header class="main-header">
+    <div class="banner">
+        <h1 class="banner-title">LUCIA'S PORTFOLIO</h1>
+    </div>
+
+    <nav class="header-nav">
+        <div class="nav-links">
+            <a href="index_en.html">Home</a>
+            <a href="about_en.html">About Me</a>
+            <a href="proyectos_en.html">Projects</a>
+            <a href="contacto_en.html">Contact</a>
+        </div>
+
+        <div class="lang-wrapper">
+            <button class="lang-btn" id="lang-btn">
+                Language <span class="lang-arrow">▼</span>
+            </button>
+
+            <div class="lang-menu" id="lang-menu">
+                <a href="../../index.html">Castellano</a>
+                <a href="../index_ca.html">Català</a>
+                <a href="index_en.html">English</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="project-body">
+
+    <h2 class="project-title">Linux Infrastructure Deployment and Network Services</h2>
+
+    <p class="project-paragraph">
+        This project consists of creating a complete infrastructure based on Linux servers,
+        designed to simulate a real business environment. The main objective was to deploy
+        essential network services, ensure their stable operation, and apply appropriate
+        security measures.
+    </p>
+
+    <img src="../../img/1thumb.jpg" alt="Linux Infrastructure" class="project-image">
+
+    <h3 class="project-subtitle">Project Objectives</h3>
+
+    <p class="project-paragraph">
+        The purpose was to build a functional environment that included fundamental services such as:
+    </p>
+
+    <ul class="project-list">
+        <li>DNS server for internal name resolution.</li>
+        <li>DHCP server for automatic IP address assignment.</li>
+        <li>FTP server for file transfer.</li>
+        <li>Apache web server with custom pages.</li>
+        <li>User and permission management in Linux.</li>
+    </ul>
+
+    <h3 class="project-subtitle">System Architecture</h3>
+
+    <p class="project-paragraph">
+        The infrastructure was designed following a modular model, where each service runs on an
+        independent virtual machine. This allows fault isolation, improved security, and easier
+        maintenance.
+    </p>
+
+    <h3 class="project-subtitle">Implemented Security</h3>
+
+    <p class="project-paragraph">
+        Several system hardening measures were applied, including:
+    </p>
+
+    <ul class="project-list">
+        <li>Firewall configuration with specific rules.</li>
+        <li>Disabling unnecessary services.</li>
+        <li>Access control through secure SSH.</li>
+        <li>Permission and group management.</li>
+    </ul>
+
+    <h3 class="project-subtitle">Technologies Used</h3>
+
+    <p class="project-paragraph">
+        To build this infrastructure, various tools and technologies oriented toward system
+        administration and network services were used. These technologies allow the creation of a
+        stable, secure, and functional environment similar to those used in real business settings.
+    </p>
+
+    <ul class="project-list">
+        <li>Linux distributions (Debian/Ubuntu Server) for the main services.</li>
+        <li>DNS server (Bind9) for internal name resolution.</li>
+        <li>DHCP server for automatic IP address assignment.</li>
+        <li>FTP server for file transfer.</li>
+        <li>Apache web server to host content and custom pages.</li>
+        <li>SSH for secure remote administration.</li>
+        <li>UFW firewall for traffic control and system hardening.</li>
+    </ul>
+
+    <h3 class="project-subtitle">Conclusions</h3>
+
+    <p class="project-paragraph">
+        This project allowed me to deeply understand how essential network services work and how they
+        integrate within a Linux infrastructure. It also strengthened my knowledge in security,
+        user administration, permission management, and deployment of critical services.
+    </p>
+
+    <p class="project-paragraph">
+        Thanks to this environment, I was able to simulate real scenarios, solve technical problems,
+        optimize services, and apply best practices in system administration. It is a project that
+        demonstrates my ability to design, configure, and maintain Linux-based infrastructures in a
+        professional manner.
+    </p>
+
+</main>
+
+<footer class="main-footer">
+    <p>© 2026 Lucía — All rights reserved</p>
+    <div class="social-links">
+        <a href="https://instagram.com/tu_usuario" target="_blank">Instagram</a>
+        <a href="https://github.com/tu_usuario" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/lucia-isabel" target="_blank">LinkedIn</a>
+    </div>
+</footer>
+
+<script src="../../js/menuidiomas.js"></script>
 
 </body>
 </html>

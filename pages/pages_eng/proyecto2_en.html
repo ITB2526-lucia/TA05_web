@@ -1,10 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtualized Environment with Proxmox and Active Directory</title>
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+<header class="main-header">
+    <div class="banner">
+        <h1 class="banner-title">LUCIA'S PORTFOLIO</h1>
+    </div>
+
+    <nav class="header-nav">
+        <div class="nav-links">
+            <a href="index_en.html">Home</a>
+            <a href="about_en.html">About Me</a>
+            <a href="proyectos_en.html">Projects</a>
+            <a href="contacto_en.html">Contact</a>
+        </div>
+
+        <div class="lang-wrapper">
+            <button class="lang-btn" id="lang-btn">
+                Language <span class="lang-arrow">▼</span>
+            </button>
+
+            <div class="lang-menu" id="lang-menu">
+                <a href="../../index.html">Castellano</a>
+                <a href="../index_ca.html">Català</a>
+                <a href="index_en.html">English</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="project-body">
+
+    <h2 class="project-title">Virtualized Environment with Proxmox and Active Directory</h2>
+
+    <p class="project-paragraph">
+        This project consists of creating a complete virtualized environment using Proxmox as the hypervisor.
+        The goal was to design a flexible, scalable, and secure infrastructure that would allow the management
+        of virtual machines, the implementation of an Active Directory domain, and the simulation of a real
+        business environment.
+    </p>
+
+    <img src="../../img/2thumb.jpg" alt="Proxmox Environment" class="project-image">
+
+    <h3 class="project-subtitle">Project Objectives</h3>
+
+    <p class="project-paragraph">
+        The project focused on building a professional environment that would allow:
+    </p>
+
+    <ul class="project-list">
+        <li>Managing virtual machines from a single centralized panel.</li>
+        <li>Implementing a functional Active Directory domain.</li>
+        <li>Creating Group Policies (GPO) for users and computers.</li>
+        <li>Configuring segmented internal networks to improve security.</li>
+        <li>Simulating a real business environment with Windows clients and Linux servers.</li>
+    </ul>
+
+    <h3 class="project-subtitle">System Architecture</h3>
+
+    <p class="project-paragraph">
+        The system is based on a Proxmox server hosting several virtual machines. Among them:
+    </p>
+
+    <ul class="project-list">
+        <li>A Windows Server domain controller.</li>
+        <li>Windows 10 clients joined to the domain.</li>
+        <li>Linux servers for testing and additional services.</li>
+        <li>Separate internal networks for management, users, and services.</li>
+    </ul>
+
+    <p class="project-paragraph">
+        This architecture allows service isolation, improved security, and easier environment administration.
+    </p>
+
+    <h3 class="project-subtitle">Active Directory and Group Policies</h3>
+
+    <p class="project-paragraph">
+        A complete domain was configured with users, groups, and security policies. GPOs allow control over
+        key configurations within the network, such as:
+    </p>
+
+    <ul class="project-list">
+        <li>Access restrictions and permissions.</li>
+        <li>Automatic software installation.</li>
+        <li>Network drive mapping.</li>
+        <li>Desktop configuration and security directives.</li>
+    </ul>
+
+    <p class="project-paragraph">
+        Thanks to these policies, the environment behaves like a real business network, with centralized control
+        and efficient management of users and devices.
+    </p>
+
+    <h3 class="project-subtitle">Technologies Used</h3>
+
+    <p class="project-paragraph">
+        To carry out this project, various tools and technologies were used to build a professional and scalable
+        virtualized environment. Among them:
+    </p>
+
+    <ul class="project-list">
+        <li>Proxmox VE as the main hypervisor.</li>
+        <li>Windows Server for Active Directory implementation.</li>
+        <li>Windows 10 as domain-joined clients.</li>
+        <li>Linux distributions for additional services and testing.</li>
+        <li>Internal virtual networks and bridges configured in Proxmox.</li>
+        <li>GPO for centralized management of users and devices.</li>
+    </ul>
+
+    <h3 class="project-subtitle">Conclusions</h3>
+
+    <p class="project-paragraph">
+        This project allowed me to deeply understand how a real business environment works,
+        from virtual machine management to user administration through Active Directory.
+        It also strengthened my knowledge in networking, security, and virtualization, and gave me practical
+        experience in creating scalable and well-organized infrastructures.
+    </p>
+
+    <p class="project-paragraph">
+        Thanks to this environment, I was able to simulate real situations, apply security policies, automate
+        configurations, and work with different operating systems in an integrated way. It is a project that
+        reflects my ability to design, implement, and manage complex systems.
+    </p>
+
+</main>
+
+<footer class="main-footer">
+    <p>© 2026 Lucía — All rights reserved</p>
+    <div class="social-links">
+        <a href="https://instagram.com/tu_usuario" target="_blank">Instagram</a>
+        <a href="https://github.com/tu_usuario" target="_blank">GitHub</a>
+    </div>
+</footer>
+
+<script src="../../js/menuidiomas.js"></script>
 
 </body>
 </html>
