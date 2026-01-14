@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contacte</title>
     <link rel="stylesheet" href="../../css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -18,21 +18,21 @@
 
     <nav class="header-nav">
         <div class="nav-links">
-            <a href="index_en.html">Home</a>
-            <a href="about_en.html">About Me</a>
-            <a href="proyectos_en.html">Projects</a>
-            <a href="contacto_en.html">Contact</a>
+            <a href="index_cat.html">Inici</a>
+        <a href="about_cat.html">Sobre mi</a>
+        <a href="proyectos_cat.html">Projectes</a>
+        <a href="contacto_cat.html">Contacte</a>
         </div>
 
         <div class="lang-wrapper">
             <button class="lang-btn" id="lang-btn">
-                Language <span class="lang-arrow">▼</span>
+                Idioma <span class="lang-arrow">▼</span>
             </button>
 
             <div class="lang-menu" id="lang-menu">
                 <a href="../../index.html">Castellano</a>
-                <a href="../pages_cat/index_cat.html">Català</a>
-                <a href="index_en.html">English</a>
+            <a href="index_cat.html">Català</a>
+            <a href="../pages_eng/index_en.html">English</a>
             </div>
         </div>
     </nav>
@@ -40,57 +40,56 @@
 
 <main class="contact-body">
 
-    <h2 class="contact-title">Contact Form</h2>
+    <h2 class="contact-title">Formulari de contacte</h2>
 
     <p class="contact-intro">
-        If you would like to get in touch with me, fill out this form and I will reply as soon as possible.
+        Si vols posar-te en contacte amb mi, omple aquest formulari i et respondré tan aviat com sigui possible.
     </p>
 
-    <!-- FORMULARIO CORREGIDO -->
     <form class="contact-form" id="contactForm">
 
         <div class="form-group">
-            <label for="nombre">Name *</label>
+            <label for="nombre">Nom *</label>
             <input type="text" id="nombre" name="nombre" required>
-            <span class="error-msg">This field is required.</span>
+            <span class="error-msg">Aquest camp és obligatori.</span>
         </div>
 
         <div class="form-group">
-            <label for="apellidos">Surname *</label>
+            <label for="apellidos">Cognoms *</label>
             <input type="text" id="apellidos" name="apellidos" required>
-            <span class="error-msg">This field is required.</span>
+            <span class="error-msg">Aquest camp és obligatori.</span>
         </div>
 
         <div class="form-group">
-            <label for="email">Email *</label>
+            <label for="email">Correu electrònic *</label>
             <input type="email" id="email" name="email" required>
-            <span class="error-msg">Enter a valid email (e.g., name@domain.com).</span>
+            <span class="error-msg">Introdueix un correu vàlid (ex: nom@domini.com).</span>
         </div>
 
         <div class="form-group">
-            <label for="telefono">Phone (optional)</label>
+            <label for="telefono">Telèfon (opcional)</label>
             <input type="tel" id="telefono" name="telefono">
-            <span class="error-msg">This field is optional.</span>
+            <span class="error-msg">Aquest camp és opcional.</span>
         </div>
 
         <div class="form-group">
-            <label for="asunto">Subject *</label>
+            <label for="asunto">Assumpte *</label>
             <input type="text" id="asunto" name="asunto" required>
-            <span class="error-msg">This field is required.</span>
+            <span class="error-msg">Aquest camp és obligatori.</span>
         </div>
 
         <div class="form-group">
-            <label for="mensaje">Message *</label>
+            <label for="mensaje">Missatge *</label>
             <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
-            <span class="error-msg">This field is required.</span>
+            <span class="error-msg">Aquest camp és obligatori.</span>
         </div>
 
-        <button type="submit" class="contact-btn" id="submitBtn" disabled>Send Message</button>
+        <button type="submit" class="contact-btn" id="submitBtn" disabled>Enviar missatge</button>
     </form>
 </main>
 
 <footer class="main-footer">
-    <p>© 2026 Lucía — All rights reserved</p>
+    <p>© 2026 Lucía — Tots els drets reservats</p>
     <div class="social-links">
         <a href="https://instagram.com" target="_blank">Instagram</a>
         <a href="https://github.com" target="_blank">GitHub</a>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entorn Virtualitzat amb Proxmox i Active Directory</title>
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="main-header">
+    <div class="banner">
+        <h1 class="banner-title">LUCIA'S PORTFOLIO</h1>
+    </div>
+
+    <nav class="header-nav">
+        <div class="nav-links">
+            <a href="index_cat.html">Inici</a>
+        <a href="about_cat.html">Sobre mi</a>
+        <a href="proyectos_cat.html">Projectes</a>
+        <a href="contacto_cat.html">Contacte</a>
+        </div>
+
+        <div class="lang-wrapper">
+            <button class="lang-btn" id="lang-btn">
+                Idioma <span class="lang-arrow">▼</span>
+            </button>
+
+            <div class="lang-menu" id="lang-menu">
+                <a href="../../index.html">Castellano</a>
+            <a href="index_cat.html">Català</a>
+            <a href="../pages_eng/index_en.html">English</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="project-body">
+
+    <h2 class="project-title">Entorn Virtualitzat amb Proxmox i Active Directory</h2>
+
+    <p class="project-paragraph">
+        Aquest projecte consisteix en la creació d’un entorn virtualitzat complet utilitzant Proxmox com a hipervisor.
+        L’objectiu era dissenyar una infraestructura flexible, escalable i segura que permetés gestionar màquines
+        virtuals, implementar un domini Active Directory i simular un entorn empresarial real.
+    </p>
+
+    <img src="../../img/2thumb.jpg" alt="Entorn Proxmox" class="project-image">
+
+    <h3 class="project-subtitle">Objectius del projecte</h3>
+
+    <p class="project-paragraph">
+        El projecte es va centrar en construir un entorn professional que permetés:
+    </p>
+
+    <ul class="project-list">
+        <li>Gestionar màquines virtuals des d’un panell centralitzat.</li>
+        <li>Implementar un domini Active Directory funcional.</li>
+        <li>Crear polítiques de grup (GPO) per a usuaris i equips.</li>
+        <li>Configurar xarxes internes segmentades per millorar la seguretat.</li>
+        <li>Simular un entorn empresarial real amb clients Windows i servidors Linux.</li>
+    </ul>
+
+    <h3 class="project-subtitle">Arquitectura del sistema</h3>
+
+    <p class="project-paragraph">
+        El sistema es basa en un servidor Proxmox que allotja diverses màquines virtuals, entre elles:
+    </p>
+
+    <ul class="project-list">
+        <li>Un controlador de domini Windows Server.</li>
+        <li>Clients Windows 10 units al domini.</li>
+        <li>Servidors Linux per a proves i serveis addicionals.</li>
+        <li>Xarxes internes separades per a gestió, usuaris i serveis.</li>
+    </ul>
+
+    <p class="project-paragraph">
+        Aquesta arquitectura permet aïllar serveis, millorar la seguretat i facilitar l’administració de l’entorn.
+    </p>
+
+    <h3 class="project-subtitle">Active Directory i polítiques de grup</h3>
+
+    <p class="project-paragraph">
+        Es va configurar un domini complet amb usuaris, grups i polítiques de seguretat. Les GPO permeten controlar
+        configuracions clau dins la xarxa, com ara:
+    </p>
+
+    <ul class="project-list">
+        <li>Restriccions d’accés i permisos.</li>
+        <li>Instal·lació automàtica de programari.</li>
+        <li>Assignació d’unitats de xarxa.</li>
+        <li>Configuració d’escriptori i directives de seguretat.</li>
+    </ul>
+
+    <p class="project-paragraph">
+        Gràcies a aquestes polítiques, l’entorn es comporta com una xarxa empresarial real, amb control centralitzat
+        i gestió eficient d’usuaris i equips.
+    </p>
+
+    <h3 class="project-subtitle">Tecnologies utilitzades</h3>
+
+    <ul class="project-list">
+        <li>Proxmox VE com a hipervisor principal.</li>
+        <li>Windows Server per a Active Directory.</li>
+        <li>Windows 10 com a clients del domini.</li>
+        <li>Distribucions Linux per a serveis addicionals i proves.</li>
+        <li>Xarxes virtuals internes i bridges configurats a Proxmox.</li>
+        <li>GPO per a la gestió centralitzada d’usuaris i equips.</li>
+    </ul>
+
+    <h3 class="project-subtitle">Conclusions</h3>
+
+    <p class="project-paragraph">
+        Aquest projecte em va permetre comprendre en profunditat com funciona un entorn empresarial real,
+        des de la gestió de màquines virtuals fins a l’administració d’usuaris mitjançant Active Directory.
+        També va reforçar els meus coneixements en xarxes, seguretat i virtualització.
+    </p>
+
+</main>
+
+<footer class="main-footer">
+    <p>© 2026 Lucía — Tots els drets reservats</p>
+    <div class="social-links">
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/lucia-isabel" target="_blank">LinkedIn</a>
+    </div>
+</footer>
+
+<script src="../../js/menuidiomas.js"></script>
+
+</body>
+</html>
