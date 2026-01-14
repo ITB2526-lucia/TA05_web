@@ -48,7 +48,7 @@
         eficientes y creativas en cualquier entorno técnico.
     </p>
 
-    <img src="../sources/yo.jpg" alt="Foto de perfil" class="about-image">
+    <img src="../img/yo.jpg" alt="Foto de perfil" class="about-image">
 
     <h3 class="about-subtitle">Recorrido académico</h3>
 
@@ -94,23 +94,7 @@
     </div>
 </footer>
 
-<script>
-const btn = document.getElementById("lang-btn");
-const menu = document.getElementById("lang-menu");
-
-btn.addEventListener("click", () => {
-    const isOpen = menu.style.display === "block";
-    menu.style.display = isOpen ? "none" : "block";
-    btn.classList.toggle("open", !isOpen);
-});
-
-document.addEventListener("click", (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-        menu.style.display = "none";
-        btn.classList.remove("open");
-    }
-});
-</script>
+<script src="../js/menuidiomas.js"></script>
 
 </body>
 </html>

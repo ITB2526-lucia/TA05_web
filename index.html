@@ -24,6 +24,7 @@
         <a href="pages/about.html">Sobre mí</a>
         <a href="pages/proyectos.html">Proyectos</a>
         <a href="pages/contacto.html">Contacto</a>
+
     </div>
 
     <div class="lang-wrapper">
@@ -85,34 +86,9 @@
     </div>
 </footer>
 
-<script>
-const btn = document.getElementById("lang-btn");
-const menu = document.getElementById("lang-menu");
+<script src="js/menuidiomas.js"></script>
 
-// Abrir/cerrar menú y animar flecha
-btn.addEventListener("click", () => {
-    const isOpen = menu.style.display === "block";
 
-    menu.style.display = isOpen ? "none" : "block";
-    btn.classList.toggle("open", !isOpen);
-});
-
-// Cerrar si haces clic fuera
-document.addEventListener("click", (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-        menu.style.display = "none";
-        btn.classList.remove("open");
-    }
-});
-
-// Cambiar idioma al hacer clic en un enlace
-document.querySelectorAll(".lang-menu a").forEach(link => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        window.location.href = link.getAttribute("href");
-    });
-});
-</script>
 
 </body>
 </html>
